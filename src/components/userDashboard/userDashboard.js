@@ -11,7 +11,7 @@ const {user, setUser, roomState, setRoomState} = useContext(StateContext)
 
     return (
         <div>
-            <SingleRoom roomp={1}/>
+            <SingleRoom fish={2}/>
         </div>
     )
 }
