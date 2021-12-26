@@ -10,8 +10,14 @@ function DashBoard(){
 const {user, setUser, roomState, setRoomState} = useContext(StateContext)
 
     return (
-        <div>
-            <SingleRoom fish={2}/>
+        <div className={Styles.container}> 
+            <div className={Styles.banner}>
+                <h1>{"USER: "}</h1>
+                <button></button>
+            </div>
+            <div className={Styles.box}>
+                {roomState.map((e, i)=><SingleRoom fish={i}/>)}
+            </div>
         </div>
     )
 }

@@ -1,4 +1,10 @@
 .box {
-    width: 200px;
-    height: 100px;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+}
+
+.box:hover {
+  cursor: pointer;
+  transform: scale(0.9);
 }
