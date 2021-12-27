@@ -7,6 +7,7 @@
   width: 200px;
   background-color: lightblue;
   opacity: 100;
+  border: grey solid 3px;
 }
 
 .option {

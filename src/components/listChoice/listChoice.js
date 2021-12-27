@@ -7,19 +7,18 @@ function ListChoice(){
     const [fishChip, setFishChip] = useState([])
 
     useEffect(()=>{
+        let admin=["ADMIN"]
         let newarray = roomState.map(e=>e[2])
         let uniqueinput = [...new Set(newarray)]
         let newuniqueinput = uniqueinput.sort((a,b)=>a-b)
+        newuniqueinput=admin.concat(newuniqueinput)
         setFishChip(newuniqueinput)
     },[])
 
 
 return(
-    <div className={Styles.container} style={{height: 47*fishChip.length}}>
-        
-        <h4 onClick={(h)=>{setUser(0); setDash("USER ADMIN")}} className={Styles.option} value={0}>ADMIN</h4>    
-        {fishChip.map((e,i)=> <h4 onClick={()=>{setUser(e); setDash("USER "+e)}} className={Styles.option} key={i} value={e}>USER {e}</h4>)}
-
+    <div className={Styles.container} style={{height: 35*fishChip.length}}>    
+        {fishChip.map((e,i)=> <h4 onClick={()=>{setUser(i===0?0:e); setDash("USER "+e)}} className={Styles.option} key={i} value={e}>USER {e}</h4>)}
     </div>
 
 
