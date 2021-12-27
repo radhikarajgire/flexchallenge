@@ -1,0 +1,15 @@
+.option:hover {
+  cursor: pointer;
+  transform: scale(0.9);
+}
+
+.container {
+  width: 200px;
+  background-color: lightblue;
+  opacity: 100;
+}
+
+.option {
+  margin: 0;
+  padding: 0;
+}
