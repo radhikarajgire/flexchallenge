@@ -26,7 +26,7 @@ function DashBoard(){
                 </div>
             </div>
             <div className={Styles.box}>
-                {roomState.map((e, i)=>user===0?<SingleRoom key={i} fish={i}/>:e[2]===user?<SingleRoom key={i} fish={i}/>:"")}
+                {roomState.map((e, i)=>user===0?<SingleRoom key={i} fish={i}/>:e[2].includes(user)===true?<SingleRoom key={i} fish={i}/>:"")}
             </div>
         </div>
     )
