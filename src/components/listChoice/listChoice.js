@@ -9,7 +9,8 @@ function ListChoice(){
     useEffect(()=>{
         let admin=["ADMIN"]
         let newarray = roomState.map(e=>e[2])
-        let uniqueinput = [...new Set(newarray)]
+        let newarray2 = newarray.reduce((e,i)=>e.concat(i))
+        let uniqueinput = [...new Set(newarray2)]
         let newuniqueinput = uniqueinput.sort((a,b)=>a-b)
         newuniqueinput=admin.concat(newuniqueinput)
         setFishChip(newuniqueinput)
