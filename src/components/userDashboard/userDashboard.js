@@ -10,7 +10,7 @@ function DashBoard(){
 
     const {user, setUser, roomState, setRoomState, dash, setDash} = useContext(StateContext)
     const [localDash, setLocalDash]=useState()
-    const [inputBox, setInputBox] = useState("")
+    const [inputBox, setInputBox] = useState(false)
 
 
 
@@ -20,9 +20,9 @@ function DashBoard(){
             <div className={Styles.banner}>
                 <h2>USER:</h2>
                 <h4 className={Styles.option} onMouseEnter={()=>{setLocalDash(dash); setDash(<ListChoice/>)}} onMouseLeave ={()=>setDash(user!==0?localDash:"USER ADMIN")} value="">{dash}</h4>
-                {user===0?<button className={Styles.button} onClick={()=>setInputBox(<InputBox/>)} >NEW USER</button>:""}
+                {user===0?<button className={Styles.button} onClick={()=>setInputBox(!inputBox)} >{inputBox===false?"ADD NEW USER":"CLOSE"}</button>:""}
                 <div>
-                    {inputBox}
+                    {inputBox===true?user===0?<InputBox/>:setInputBox(false):""}
                 </div>
             </div>
             <div className={Styles.box}>
