@@ -1,7 +1,18 @@
 .container {
-  width: 200px;
+  width: 220px;
   height: 200px;
   background-color: lightblue;
   position: absolute;
-  margin-top: 300px;
+  top: 50vh;
+  left: 50vw;
+  transform: translateY(-100px) translateX(-110px);
+}
+
+.choice {
+  margin: 0;
+}
+
+.choice:hover {
+  cursor: pointer;
+  transform: scale(0.9);
 }
