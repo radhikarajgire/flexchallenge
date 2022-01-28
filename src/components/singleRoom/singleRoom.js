@@ -21,6 +21,7 @@ return(
     <div className={Styles.box} style={{backgroundColor: textCol[0], color: textCol[1]}} onClick={()=>{
         setRoomState((roomState), [...roomState, roomState[roomp][1]=1-roomState[roomp][1]])
        chipsh()
+       console.log(roomState)
         }}>
             <h2>{roomState[roomp][0]}</h2>
             <p>{"USER: "+roomState[roomp][2]}</p>

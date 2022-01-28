@@ -4,8 +4,8 @@ import Styles from "./inputBox.module.css"
 import EditorSurface from "../editorSurface/editorSurface"
 
 function InputBox(){
-const {overInfo, setOverInfo} = useContext(StateContext)
-const [disp, setDisp] = useState("")
+const {overInfo, setOverInfo, disp, setDisp} = useContext(StateContext)
+
 
 return(
     <div className={Styles.container}>
